@@ -1,0 +1,79 @@
+/* 
+// ─────────────────────────────────────────────────────────────────────────────
+// HOME PAGE STYLES
+// Below-the-fold styles for the homepage that load after critical styles.
+// The first section of the home page should go in critical.scss, while the
+// rest of the home page styles go in here.
+// ─────────────────────────────────────────────────────────────────────────────
+*/
+
+/* ******************* */
+/*    SIDE BY SIDE     */
+/* ******************* */
+
+@media only screen and (min-width: 0rem) {
+  #side-by-side,
+  #side-by-side-reverse {
+    background-color: transparent;
+
+    padding: var(--section-padding);
+
+    .container {
+      width: 100%;
+      max-width: calc(var(--section-max-width) / 16 * 1rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .left-content,
+    .right-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, 
+	     * set to flex-start to left align */
+      align-items: center;
+      /*TODO: Check if max width is necessary */
+      max-width: calc(542 / 16 * 1rem);
+
+      /*FOR VISUAL DEV PURPOSES ONLY*/
+      background-color: #aaaacc;
+      border: 1px solid gray;
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #side-by-side,
+  #side-by-side-reverse {
+    .container {
+      flex-flow: row;
+      justify-content: space-between;
+      gap: calc(52 / 16 * 1rem);
+    }
+  }
+}
+
+/* ********************  */
+/*  SIDE BY SIDE REVERSE */
+/* ********************  */
+@media only screen and (min-width: 0rem) {
+  #side-by-side-reverse {
+    background-color: #f7f7f7;
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  #side-by-side-reverse {
+    .container {
+      flex-flow: row-reverse;
+    }
+  }
+}
