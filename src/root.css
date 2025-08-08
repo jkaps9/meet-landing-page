@@ -31,8 +31,8 @@
   --secondary: #1d3557ff;
   --accent: #457b9dff;
 
-  --header-font: "Roboto", Arial, Helvetica, sans-serif;
-  --body-font: "Roboto", Arial, Helvetica, sans-serif;
+  --header-font: "Red Hat Display", Arial, Helvetica, sans-serif;
+  --body-font: "Red Hat Display", Arial, Helvetica, sans-serif;
 
   /* 13px - 16px */
   --topper-font-size: clamp(0.8125rem, 1.6vw, 1rem);
@@ -156,43 +156,29 @@ body.dark-mode {
 /*        FONTS        */
 /* ******************* */
 
-/* roboto-regular - latin */
+/* red-hat-display-regular - latin */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
   font-style: normal;
-  font-family: "Roboto";
   font-weight: 400;
-  font-display: swap;
-  src:
-    local(""),
-    url("./assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/red-hat-display-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* roboto-700 - latin */
+/* red-hat-display-500 - latin */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
   font-style: normal;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-display: swap;
-  src:
-    local(""),
-    url("./assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-weight: 500;
+  src: url("../fonts/red-hat-display-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-/* roboto-900 - latin */
+/* red-hat-display-900 - latin */
 @font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
   font-style: normal;
-  font-family: "Roboto";
   font-weight: 900;
-  font-display: swap;
-  src:
-    local(""),
-    url("./assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("./assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: url("../fonts/red-hat-display-v20-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* ******************* */
