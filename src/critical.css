@@ -75,20 +75,30 @@
 /* TABLET */
 @media only screen and (min-width: 48rem) {
   #hero {
-    .image-container {
-      height: 303px;
-      gap: 2rem;
+    .container {
+      row-gap: 4.5rem;
+      grid-template-rows: 303px auto;
     }
+
     .content {
       margin: 0 auto;
-
-      h1,
-      p {
-        max-width: 448.3px;
-      }
+      max-width: 448.3px;
     }
+
     .button-container {
       flex-direction: row;
+    }
+
+    .left-faces {
+      & > img {
+        right: 16px;
+      }
+    }
+
+    .right-faces {
+      & > img {
+        left: 16px;
+      }
     }
   }
 }
