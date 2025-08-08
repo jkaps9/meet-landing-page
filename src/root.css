@@ -68,7 +68,6 @@ body {
   text-transform: uppercase;
   text-align: inherit;
   color: var(--cyan-600);
-  margin-bottom: 0.25rem;
   display: block;
 }
 
@@ -205,6 +204,11 @@ body.dark-mode {
 
   .text-preset-3 {
     font-size: 12px;
+  }
+
+  .text-preset-4 {
+    font-size: 16px;
+    line-height: 1.5em;
   }
 }
 
