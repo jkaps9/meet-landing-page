@@ -76,31 +76,6 @@ body {
   display: block;
 }
 
-.title {
-  font-size: var(--header-font-size);
-  font-weight: 900;
-  line-height: 1.2em;
-  text-align: inherit;
-  max-width: 43.75rem;
-  margin: 0 0 1rem 0;
-  color: var(--color-header-text);
-  position: relative;
-}
-
-.text {
-  font-size: var(--bod-font-size);
-  line-height: 1.5em;
-  text-align: inherit;
-  width: 100%;
-  max-width: 40.625rem;
-  margin: 0;
-  color: var(--color-body-text);
-}
-
-.bold {
-  font-weight: 700;
-}
-
 /* Desktop Utility Classes */
 @media only screen and (min-width: 64rem) {
   .hide-on-mobile {
