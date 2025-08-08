@@ -65,12 +65,8 @@ body {
 
 /* Utility Classes */
 .topper {
-  font-size: var(--topper-font-size);
-  line-height: 1.2em;
   text-transform: uppercase;
   text-align: inherit;
-  letter-spacing: 0.1em;
-  font-weight: 700;
   color: var(--color-primary);
   margin-bottom: 0.25rem;
   display: block;
