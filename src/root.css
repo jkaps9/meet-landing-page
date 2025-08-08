@@ -67,7 +67,7 @@ body {
 .topper {
   text-transform: uppercase;
   text-align: inherit;
-  color: var(--color-primary);
+  color: var(--cyan-600);
   margin-bottom: 0.25rem;
   display: block;
 }
