@@ -11,7 +11,7 @@
 /*       COLLAGE       */
 /* ******************* */
 
-.collage {
+#collage {
   padding: var(--section-padding);
 
   .container {
@@ -24,6 +24,15 @@
     height: 144px;
     width: auto;
     border-radius: 10px;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  #collage {
+    .container {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
   }
 }
 
