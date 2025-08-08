@@ -23,12 +23,12 @@
     gap: 3rem;
   }
 
-  .image-container {
+  /* .image-container {
     height: 160px;
     display: flex;
     justify-content: center;
     gap: 17px;
-  }
+  } */
 
   img {
     height: 100%;
@@ -91,13 +91,6 @@
       grid-template-columns: 1fr auto 1fr;
       grid-template-areas: "left text right";
       gap: 2rem;
-    }
-
-    .image-container {
-      height: 100%;
-      min-width: 100%;
-      position: absolute;
-      justify-content: space-between;
     }
 
     .left-faces,
