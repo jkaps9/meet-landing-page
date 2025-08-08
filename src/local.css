@@ -43,3 +43,42 @@
     gap: 2rem;
   }
 }
+
+/* ******************* */
+/*        NUMBER       */
+/* ******************* */
+
+#number {
+  padding: var(--section-padding);
+  padding-top: 2rem;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .line {
+    border-left: 1px solid var(--slate-300);
+    height: 80px;
+    width: 1px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: -80px;
+    top: 0;
+  }
+
+  .number {
+    height: 56px;
+    width: 56px;
+    color: var(--slate-600);
+    border: 1px solid var(--slate-300);
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
