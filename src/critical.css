@@ -14,7 +14,7 @@
   #hero {
     /* Centers button */
     text-align: center;
-    padding: 4rem 2rem 2rem;
+    padding: var(--section-padding);
 
     .container {
       width: 100%;

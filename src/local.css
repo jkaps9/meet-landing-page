@@ -11,41 +11,39 @@
 /*    SIDE BY SIDE     */
 /* ******************* */
 
-@media only screen and (min-width: 0rem) {
-  #side-by-side,
-  #side-by-side-reverse {
-    background-color: transparent;
+#side-by-side,
+#side-by-side-reverse {
+  background-color: transparent;
 
-    padding: var(--section-padding);
+  padding: var(--section-padding);
 
-    .container {
-      width: 100%;
-      max-width: calc(var(--section-max-width) / 16 * 1rem);
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* 48px - 64px */
-      gap: clamp(3rem, 6vw, 4rem);
-    }
+  .container {
+    width: 100%;
+    max-width: calc(var(--section-max-width) / 16 * 1rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
 
-    .left-content,
-    .right-content {
-      /* set text align to left if content needs to be left aligned */
-      text-align: left;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      /* centers content horizontally, 
+  .left-content,
+  .right-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, 
 	     * set to flex-start to left align */
-      align-items: center;
-      /*TODO: Check if max width is necessary */
-      max-width: calc(542 / 16 * 1rem);
+    align-items: center;
+    /*TODO: Check if max width is necessary */
+    max-width: calc(542 / 16 * 1rem);
 
-      /*FOR VISUAL DEV PURPOSES ONLY*/
-      background-color: #aaaacc;
-      border: 1px solid gray;
-    }
+    /*FOR VISUAL DEV PURPOSES ONLY*/
+    background-color: #aaaacc;
+    border: 1px solid gray;
   }
 }
 
@@ -58,5 +56,25 @@
       justify-content: space-between;
       gap: calc(52 / 16 * 1rem);
     }
+  }
+}
+
+/* ******************* */
+/*       COLLAGE       */
+/* ******************* */
+
+.collage {
+  padding: var(--section-padding);
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  img {
+    height: 144px;
+    width: auto;
+    border-radius: 10px;
   }
 }
