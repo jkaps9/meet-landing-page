@@ -60,20 +60,3 @@
     }
   }
 }
-
-/* ********************  */
-/*  SIDE BY SIDE REVERSE */
-/* ********************  */
-@media only screen and (min-width: 0rem) {
-  #side-by-side-reverse {
-    background-color: #f7f7f7;
-  }
-}
-
-@media only screen and (min-width: 64rem) {
-  #side-by-side-reverse {
-    .container {
-      flex-flow: row-reverse;
-    }
-  }
-}
