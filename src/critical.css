@@ -62,10 +62,37 @@
     }
     .content {
       margin: 0 auto;
-      max-width: 28rem;
+
+      h1,
+      p {
+        max-width: 448.3px;
+      }
     }
     .button-container {
       flex-direction: row;
+    }
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 64rem) {
+  #hero {
+    .container {
+      position: relative;
+    }
+
+    .image-container {
+      height: auto;
+      min-width: 100%;
+      position: absolute;
+      justify-content: space-between;
+    }
+
+    img:first-of-type {
+      margin-right: auto;
+    }
+    img:last-of-type {
+      margin-left: auto;
     }
   }
 }
