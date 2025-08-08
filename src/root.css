@@ -232,10 +232,6 @@ body.dark-mode {
   }
 }
 
-.version {
-  color: var(--cyan-300);
-}
-
 .button-solid {
   z-index: 1;
   position: relative;
@@ -243,10 +239,6 @@ body.dark-mode {
   width: auto;
   padding: 1rem 2.5rem;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1rem;
-  line-height: 1em;
-  font-weight: bold;
   border-radius: 1.8125rem;
   overflow: hidden;
   transition: color 0.3s;
@@ -255,9 +247,15 @@ body.dark-mode {
   color: var(--white);
   &.blue {
     background-color: var(--cyan-600);
+    .version {
+      color: var(--cyan-300);
+    }
   }
   &.purple {
     background-color: var(--purple-600);
+    .version {
+      color: var(--purple-300);
+    }
   }
 }
 
@@ -375,17 +373,11 @@ header {
 @media only screen and (min-width: 0rem) {
   #cta {
     padding: var(--section-padding);
+    padding-bottom: 4rem;
     position: relative;
 
     .container {
       width: 100%;
-      max-width: calc(1280 / 16 * 1rem);
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      /* 48px - 64px */
-      gap: clamp(3rem, 6vw, 4rem);
     }
 
     .content {
@@ -396,19 +388,15 @@ header {
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
+      gap: 1.5rem;
     }
 
-    .title {
-      color: var(--color-header-text-light);
+    h2 {
+      color: var(--white);
     }
 
-    .text {
-      margin-bottom: calc(16 / 16 * 1rem);
-      color: var(--color-body-text-light);
-      opacity: 0.8;
-      &:last-of-type {
-        margin-bottom: calc(32 / 16 * 1rem);
-      }
+    p {
+      color: var(--white);
     }
 
     .picture {
@@ -419,17 +407,16 @@ header {
       z-index: -1;
       top: 0;
       left: 0;
-      z-index: -1;
 
       &:before {
-        /* black color overlay */
+        /* color overlay */
         content: "";
         position: absolute;
         display: block;
         height: 100%;
         width: 100%;
-        background: #000;
-        opacity: 0.8;
+        background: var(--cyan-600);
+        opacity: 0.9;
         top: 0;
         left: 0;
         z-index: 1;
