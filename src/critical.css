@@ -17,24 +17,23 @@
 
   .container {
     max-width: calc(var(--section-max-width) / 16 * 1rem);
-    height: 360px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 160px auto;
     grid-template-areas:
       "left right"
       "text text";
-    gap: 2rem;
+    row-gap: 3rem;
   }
 
   .left-faces,
   .right-faces {
-    width: 100%;
+    width: auto;
     height: 100%;
     position: relative;
 
     & > img {
-      height: auto;
+      height: 100%;
       width: auto;
       position: absolute;
       bottom: 0;
@@ -44,14 +43,14 @@
   .left-faces {
     grid-area: left;
     & > img {
-      right: 32%;
+      right: 8.5px;
     }
   }
 
   .right-faces {
     grid-area: right;
     & > img {
-      left: 32%;
+      left: 8.5px;
     }
   }
 
