@@ -52,12 +52,16 @@
     text-align: center;
     gap: 2rem;
   }
+
+  .topper {
+    margin-bottom: -1rem;
+  }
 }
 
 /* TABLET */
 @media only screen and (min-width: 48rem) {
   #single-column {
-    max-width: calc(540 / 16 * 1rem);
+    max-width: calc(504 / 16 * 1rem);
     margin: 0 auto;
   }
 }
