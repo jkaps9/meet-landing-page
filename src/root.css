@@ -91,16 +91,13 @@ h4,
 h5,
 h6 {
   font-family: var(--header-font);
-  line-height: 1.2em;
-  color: var(--color-complementary);
+  color: var(--slate-900);
 }
 
 p,
 li,
 a {
-  font-size: calc(16 / 16 * 1rem);
-  line-height: 1.5em;
-  color: var(--color-body-text);
+  color: var(--slate-600);
 }
 
 a,
@@ -194,6 +191,41 @@ body.dark-mode {
   font-weight: 900;
   line-height: 1.5em;
   letter-spacing: 0px;
+}
+
+/* MOBILE */
+@media only screen and (min-width: 0rem) and (max-width: 40rem) {
+  .text-preset-1 {
+    font-size: 40px;
+  }
+
+  .text-preset-2 {
+    font-size: 32px;
+  }
+
+  .text-preset-3 {
+    font-size: 12px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 40rem) and (max-width: 64rem) {
+  .text-preset-1 {
+    font-size: 48px;
+  }
+
+  .text-preset-2 {
+    font-size: 36px;
+  }
+
+  .text-preset-3 {
+    font-size: 14px;
+  }
+
+  .text-preset-4 {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
 }
 
 .button-solid {
