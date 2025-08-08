@@ -228,31 +228,43 @@ body.dark-mode {
   }
 }
 
+.version {
+  color: var(--cyan-300);
+}
+
 .button-solid {
   z-index: 1;
   position: relative;
   display: inline-block;
-  background-color: var(--color-primary);
   width: auto;
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1rem;
   line-height: 1em;
   font-weight: bold;
-  border-radius: 0.25rem;
+  border-radius: 1.8125rem;
   overflow: hidden;
-  color: var(--color-body-text-light);
   transition: color 0.3s;
   transition-delay: 0.1s;
   text-align: center;
+  color: var(--white);
+  &.blue {
+    background-color: var(--cyan-600);
+  }
+  &.purple {
+    background-color: var(--purple-600);
+  }
 }
+
 .button-solid:hover {
   color: #fff;
 }
+
 .button-solid:hover:before {
   width: 100%;
 }
+
 .button-solid:before {
   z-index: -1;
   position: absolute;
