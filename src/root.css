@@ -16,6 +16,18 @@
 }
 
 :root {
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
+
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+
+  --white: #fafafa;
+
   --color-primary: #e63946;
   --color-primary-light: #e46671;
 
@@ -52,6 +64,18 @@ body {
 }
 
 /* Utility Classes */
+.topper {
+  font-size: var(--topper-font-size);
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-align: inherit;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
 .title {
   font-size: var(--header-font-size);
   font-weight: 900;
@@ -165,45 +189,79 @@ body.dark-mode {
 /* ******************* */
 /*  COMPONENTS & UTILS */
 /* ******************* */
-@media only screen and (min-width: 0rem) {
-  .button-solid {
-    z-index: 1;
-    position: relative;
-    display: inline-block;
-    background-color: var(--color-primary);
-    width: auto;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    line-height: 1em;
-    font-weight: bold;
-    border-radius: 0.25rem;
-    overflow: hidden;
-    color: var(--color-body-text-light);
-    transition: color 0.3s;
-    transition-delay: 0.1s;
-    text-align: center;
-  }
-  .button-solid:hover {
-    color: #fff;
-  }
-  .button-solid:hover:before {
-    width: 100%;
-  }
-  .button-solid:before {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background-color: var(--color-complementary);
-    height: 100%;
-    width: 0;
-    transition: width 0.3s;
-  }
+
+.text-preset-1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1em;
+  letter-spacing: 0px;
+}
+
+.text-preset-2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.1em;
+  letter-spacing: 0px;
+}
+
+.text-preset-3 {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.1em;
+  letter-spacing: 4px;
+}
+
+.text-preset-4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.1em;
+  letter-spacing: 0px;
+}
+
+.text-preset-5 {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5em;
+  letter-spacing: 0px;
+}
+
+.button-solid {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  background-color: var(--color-primary);
+  width: auto;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 1em;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  color: var(--color-body-text-light);
+  transition: color 0.3s;
+  transition-delay: 0.1s;
+  text-align: center;
+}
+.button-solid:hover {
+  color: #fff;
+}
+.button-solid:hover:before {
+  width: 100%;
+}
+.button-solid:before {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  opacity: 1;
+  display: block;
+  background-color: var(--color-complementary);
+  height: 100%;
+  width: 0;
+  transition: width 0.3s;
 }
 
 /* ****** */
