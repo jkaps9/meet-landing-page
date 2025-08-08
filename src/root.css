@@ -162,7 +162,8 @@ body.dark-mode {
   font-family: "Red Hat Display";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/red-hat-display-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/red-hat-display-v20-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* red-hat-display-500 - latin */
 @font-face {
@@ -170,7 +171,8 @@ body.dark-mode {
   font-family: "Red Hat Display";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/red-hat-display-v20-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/red-hat-display-v20-latin-500.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* red-hat-display-900 - latin */
 @font-face {
@@ -178,7 +180,8 @@ body.dark-mode {
   font-family: "Red Hat Display";
   font-style: normal;
   font-weight: 900;
-  src: url("../fonts/red-hat-display-v20-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../src/assets/fonts/red-hat-display-v20-latin-900.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* ******************* */
