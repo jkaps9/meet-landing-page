@@ -61,6 +61,7 @@ body {
   font-family: var(--body-font);
   font-size: 100%; /* unsure why this is necessary */
   color: var(--color-body-text);
+  overflow-x: hidden;
 }
 
 /* Utility Classes */
