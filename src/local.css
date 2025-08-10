@@ -18,11 +18,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    max-width: calc(var(--section-max-width) / 16 * 1rem);
+    margin: 0 auto;
   }
 
   img {
     height: 144px;
     width: auto;
+    max-width: 147.5px;
     border-radius: 10px;
   }
 }
@@ -33,6 +36,25 @@
     .container {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
+    }
+
+    img {
+      height: 160px;
+      max-width: 152px;
+    }
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 64rem) {
+  #collage {
+    .container {
+      gap: 2rem;
+    }
+
+    img {
+      height: 256px;
+      max-width: 256px;
     }
   }
 }
