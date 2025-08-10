@@ -15,32 +15,33 @@
   padding: var(--section-padding);
 
   .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
     max-width: calc(var(--section-max-width) / 16 * 1rem);
     margin: 0 auto;
   }
 
   img {
-    height: 144px;
-    width: auto;
-    max-width: 147.5px;
+    height: auto;
+    width: calc(50% - 0.5rem);
+    max-height: 256px;
+    max-width: 256px;
     border-radius: 10px;
   }
 }
 
 /* TABLET */
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 34rem) {
   #collage {
     .container {
-      grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
     }
 
     img {
-      height: 160px;
-      max-width: 152px;
+      width: calc(25% - 1.125rem);
     }
   }
 }
@@ -53,8 +54,7 @@
     }
 
     img {
-      height: 256px;
-      max-width: 256px;
+      width: calc(25% - 1.5rem);
     }
   }
 }
