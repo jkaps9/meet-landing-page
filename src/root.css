@@ -198,38 +198,22 @@ button {
   color: var(--white);
   &.blue {
     background-color: var(--cyan-600);
+    &:hover {
+      background-color: #71c0d4;
+    }
     .version {
       color: var(--cyan-300);
     }
   }
   &.purple {
     background-color: var(--purple-600);
+    &:hover {
+      background-color: #b18bdd;
+    }
     .version {
       color: var(--purple-300);
     }
   }
-}
-
-.button-solid:hover {
-  color: #fff;
-}
-
-.button-solid:hover:before {
-  width: 100%;
-}
-
-.button-solid:before {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  opacity: 1;
-  display: block;
-  background-color: var(--cyan-300);
-  height: 100%;
-  width: 0;
-  transition: width 0.3s;
 }
 
 /* ****** */
