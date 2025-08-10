@@ -1,0 +1,394 @@
+/* 
+// ─────────────────────────────────────────────────────────────────────────────
+// GLOBAL STYLES
+// Core stylesheet containing CSS variables, dark mode styles, base element
+// styling, typography rules, utility classes, component styles, navigation,
+// footer, and other repeated section styles for the entire site
+// ───────────────────────────────────────────────────────────────────────────── 
+*/
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
+
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+
+  --white: #fafafa;
+
+  --color-primary: #e63946;
+  --color-primary-light: #e46671;
+
+  --color-complementary: #1d3557;
+  --color-body-text: #0f0f0f;
+  --color-body-text-light: #f1faee;
+  --color-header-text: #0f0f0f;
+  --color-header-text-light: #f1faee;
+  --color-highlight: #457b9d;
+  --color-highlight-light: #a8dadc;
+
+  --dark: #0f1d30;
+  --secondary: #1d3557ff;
+  --accent: #457b9dff;
+
+  --header-font: "Red Hat Display", Arial, Helvetica, sans-serif;
+  --body-font: "Red Hat Display", Arial, Helvetica, sans-serif;
+
+  /* 31px - 49px */
+  --header-font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --body-font-size: 1rem;
+
+  --header-logo-scale-factor: 186; /* decreasing/increasing this value will decrease/increase max size of the header logo */
+
+  --section-padding: 4rem 2rem 2rem;
+  --section-max-width: 1120; /*do not include units*/
+}
+
+html,
+body {
+  font-family: var(--body-font);
+  font-size: 100%; /* unsure why this is necessary */
+  color: var(--color-body-text);
+  overflow-x: hidden;
+}
+
+/* Utility Classes */
+.topper {
+  text-transform: uppercase;
+  text-align: inherit;
+  color: var(--cyan-600);
+  display: block;
+}
+
+/* Desktop Utility Classes */
+@media only screen and (min-width: 64rem) {
+  .hide-on-mobile {
+    display: block;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+/* Base Element Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+  color: var(--slate-900);
+}
+
+p,
+li,
+a {
+  color: var(--slate-600);
+}
+
+a,
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+body.dark-mode {
+  background-color: var(--dark);
+
+  p,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-body-text-light);
+  }
+}
+
+/* ******************* */
+/*        FONTS        */
+/* ******************* */
+
+/* red-hat-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/assets/fonts/red-hat-display-v20-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/fonts/red-hat-display-v20-latin-500.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../src/assets/fonts/red-hat-display-v20-latin-900.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ******************* */
+/*  COMPONENTS & UTILS */
+/* ******************* */
+
+.text-preset-1 {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1em;
+  letter-spacing: 0px;
+}
+
+.text-preset-2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.1em;
+  letter-spacing: 0px;
+}
+
+.text-preset-3 {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.1em;
+  letter-spacing: 4px;
+}
+
+.text-preset-4 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0px;
+}
+
+.text-preset-5 {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.5em;
+  letter-spacing: 0px;
+}
+
+/* MOBILE */
+@media only screen and (min-width: 0rem) and (max-width: 40rem) {
+  .text-preset-1 {
+    font-size: 40px;
+  }
+
+  .text-preset-2 {
+    font-size: 32px;
+  }
+
+  .text-preset-3 {
+    font-size: 12px;
+  }
+
+  .text-preset-4 {
+    font-size: 16px;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 40rem) and (max-width: 64rem) {
+  .text-preset-1 {
+    font-size: 48px;
+  }
+
+  .text-preset-2 {
+    font-size: 36px;
+  }
+
+  .text-preset-3 {
+    font-size: 14px;
+  }
+
+  .text-preset-4 {
+    font-size: 16px;
+  }
+}
+
+.button-solid {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  border-radius: 1.8125rem;
+  overflow: hidden;
+  transition: color 0.3s;
+  transition-delay: 0.1s;
+  text-align: center;
+  color: var(--white);
+  &.blue {
+    background-color: var(--cyan-600);
+    .version {
+      color: var(--cyan-300);
+    }
+  }
+  &.purple {
+    background-color: var(--purple-600);
+    .version {
+      color: var(--purple-300);
+    }
+  }
+}
+
+.button-solid:hover {
+  color: #fff;
+}
+
+.button-solid:hover:before {
+  width: 100%;
+}
+
+.button-solid:before {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  opacity: 1;
+  display: block;
+  background-color: var(--color-complementary);
+  height: 100%;
+  width: 0;
+  transition: width 0.3s;
+}
+
+/* ****** */
+/* HEADER */
+/* ****** */
+header {
+  width: 100%;
+  padding: 3rem 5rem 0;
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 118px;
+      height: 28px;
+      /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
+      object-fit: contain;
+    }
+  }
+}
+
+/* ******************* */
+/*       DESKTOP       */
+/* ******************* */
+@media only screen and (min-width: 64rem) {
+  header {
+    padding-top: 5rem;
+  }
+}
+
+/* ******************* */
+/*         CTA         */
+/* ******************* */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cta {
+    padding: var(--section-padding);
+    padding-bottom: 4rem;
+    position: relative;
+
+    .container {
+      width: 100%;
+    }
+
+    .content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    h2 {
+      color: var(--white);
+    }
+
+    p {
+      color: var(--white);
+    }
+
+    .picture {
+      height: 100%;
+      width: 100%;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+
+      &:before {
+        /* color overlay */
+        content: "";
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: var(--cyan-600);
+        opacity: 0.9;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 48rem) {
+  #cta {
+    .container {
+      max-width: calc(504 / 16 * 1rem);
+      margin: 0 auto;
+    }
+  }
+}
