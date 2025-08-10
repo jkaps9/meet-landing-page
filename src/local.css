@@ -88,6 +88,18 @@
   }
 }
 
+/* DESKTOP */
+@media only screen and (min-width: 64rem) {
+  #single-column {
+    max-width: calc(544 / 16 * 1rem);
+    margin: 0 auto;
+  }
+
+  h2 {
+    max-width: 445px;
+  }
+}
+
 /* ******************* */
 /*        NUMBER       */
 /* ******************* */
