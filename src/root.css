@@ -28,29 +28,8 @@
 
   --white: #fafafa;
 
-  --color-primary: #e63946;
-  --color-primary-light: #e46671;
-
-  --color-complementary: #1d3557;
-  --color-body-text: #0f0f0f;
-  --color-body-text-light: #f1faee;
-  --color-header-text: #0f0f0f;
-  --color-header-text-light: #f1faee;
-  --color-highlight: #457b9d;
-  --color-highlight-light: #a8dadc;
-
-  --dark: #0f1d30;
-  --secondary: #1d3557ff;
-  --accent: #457b9dff;
-
   --header-font: "Red Hat Display", Arial, Helvetica, sans-serif;
   --body-font: "Red Hat Display", Arial, Helvetica, sans-serif;
-
-  /* 31px - 49px */
-  --header-font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
-  --body-font-size: 1rem;
-
-  --header-logo-scale-factor: 186; /* decreasing/increasing this value will decrease/increase max size of the header logo */
 
   --section-padding: 4rem 2rem 2rem;
   --section-max-width: 1120; /*do not include units*/
@@ -60,7 +39,6 @@ html,
 body {
   font-family: var(--body-font);
   font-size: 100%; /* unsure why this is necessary */
-  color: var(--color-body-text);
   overflow-x: hidden;
 }
 
@@ -70,17 +48,6 @@ body {
   text-align: inherit;
   color: var(--cyan-600);
   display: block;
-}
-
-/* Desktop Utility Classes */
-@media only screen and (min-width: 64rem) {
-  .hide-on-mobile {
-    display: block;
-  }
-
-  .hide-on-desktop {
-    display: none;
-  }
 }
 
 /* Base Element Styles */
@@ -104,21 +71,6 @@ a,
 button {
   &:hover {
     cursor: pointer;
-  }
-}
-
-body.dark-mode {
-  background-color: var(--dark);
-
-  p,
-  li,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--color-body-text-light);
   }
 }
 
@@ -274,7 +226,7 @@ body.dark-mode {
   content: "";
   opacity: 1;
   display: block;
-  background-color: var(--color-complementary);
+  background-color: var(--cyan-300);
   height: 100%;
   width: 0;
   transition: width 0.3s;
