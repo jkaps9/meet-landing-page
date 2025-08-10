@@ -392,3 +392,28 @@ header {
     }
   }
 }
+
+/* TABLET */
+@media only screen and (min-width: 64rem) {
+  #cta {
+    padding-top: 112px;
+    padding-bottom: 112px;
+    .container {
+      max-width: calc(var(--section-max-width) / 16 * 1rem);
+    }
+    .content {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      text-align: start;
+    }
+
+    p {
+      width: 355px;
+    }
+
+    a {
+      margin-left: 3.9375rem;
+    }
+  }
+}
